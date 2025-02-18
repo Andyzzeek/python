@@ -1,0 +1,11 @@
+vyraz = input("put: ")
+
+try: 
+
+    vysledek = eval(vyraz, {"_builtins_":None},)
+    print("vysledek je:", vysledek)
+except ZeroDivisionError:
+    print("cannot zero divide")
+except Exception as abaguluba:
+    print("Něco se pokazilo:", abaguluba)
+

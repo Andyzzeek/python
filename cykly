@@ -1,0 +1,42 @@
+cislo = 8
+cislo2 = 10
+while cislo < cislo2:
+    print(cislo, f"je mensi nez {cislo2}.")
+    cislo += 1
+    if cislo == {cislo2}:
+        print(cislo, f"je rovno {cislo2}.")
+        break
+
+for i in range(100):
+    print(i, "i love u")
+
+
+#Funkce pro trideni cisel
+def serazeni_cisel(cisla):
+    n = len(cisla) # Pocet cisel v seznamu
+    print("\n Průběh řazení čísel:")
+    
+    # Vnejsi cyklus - Kolikrat se projde seznamem
+    for i in range(n-1):
+        # Vnitrni cyklus - Porovnani sousednich cisel
+        for j in range(n-1-i):
+            # Prohozeni cisel
+            if cisla[j] > cisla[j+1]:
+                # Pokud je leve cislo vetsi nez prave, prohodime je
+                cisla[j], cisla[j+1] = cisla[j+1], cisla[j]
+    
+    # Vypiseme aktualni stav seznamu
+        print(f"Po {i+1}. cyklu: {cisla}")
+    return cisla
+
+asdds = 2
+
+# Hlavni program
+print("Zadej cisla oddelena mezerou:")
+zadal_uzivatel = input("Cisla: ")
+cisla = list(map(int, zadal_uzivatel.split(" ")))   # Rozdelime vstup uzivatele podle mezer a prevedeme na seznam cisel
+
+print("\nZadana cisla pred serazenim:", cisla)
+
+serazena_cisla = serazeni_cisel(cisla)
+print("Zadana cisla po serazeni:", serazena_cisla)
